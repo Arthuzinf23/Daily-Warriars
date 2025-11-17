@@ -1,0 +1,166 @@
+body {
+  background: url('../img/backgrounds/florest.png') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.cadastro-container {
+  position: relative;
+}
+
+.cadastro-box {
+  width: 450px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.foto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.foto-container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.foto-container label {
+  color: #333;
+  font-size: 0.9em;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.req {
+  color: red;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  outline: none;
+  background: transparent;
+}
+
+.nivel-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.nivel {
+  width: 60px;
+  height: 60px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.nivel:hover,
+.nivel.ativo {
+  background: #cf0f0f;
+  color: white;
+}
+
+.check-container {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.check-container input {
+  margin-right: 8px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.social-buttons button {
+  border: none;
+  border-radius: 20px;
+  padding: 8px 12px;
+  color: white;
+  cursor: pointer;
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.google {
+  background: #db4437;
+}
+
+.btn-cadastrar {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background: #555;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-cadastrar:hover {
+  background: #333;
+}
+
+.mensagem {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: #28a745;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  animation: fadeInOut 3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeInOut {
+  0% {opacity: 0; transform: translateY(-10px);}
+  20% {opacity: 1; transform: translateY(0);}
+  80% {opacity: 1;}
+  100% {opacity: 0; transform: translateY(-10px);}
+}

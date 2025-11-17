@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="../assets/css/perfil.css">
+</head>
+<body>
+
+<div class="perfil-container">
+  <!-- Painel esquerdo -->
+  <aside class="perfil-menu">
+    <img id="fotoPerfil" src="../assets/img/default-user.png" alt="Foto de perfil" class="perfil-foto">
+    <input type="file" id="uploadFoto" accept="image/png, image/jpeg" hidden>
+    <button id="btnTrocarFoto" class="trocar-foto">Trocar foto</button>
+
+    <p id="nomeUsuario">nome do usuário</p>
+    <p id="emailUsuario">anonimo123@gmail.com</p>
+    <hr>
+
+    <button class="menu-btn ativo" data-section="dados">Redefinir dados ➜</button>
+    <button class="menu-btn" data-section="senha">Redefinir senha ➜</button>
+    <button class="menu-btn" data-section="evolucao">Evolução no jogo ➜</button>
+
+    <button id="logout" class="logout-btn">Log Out</button>
+  </aside>
+
+  <!-- Painel direito -->
+  <main class="perfil-conteudo">
+    <!-- Seção: Redefinir dados -->
+    <section id="dados" class="conteudo-section ativo">
+      <h2>Redefinir dados</h2>
+      <div class="campo">
+        <h3>Trocar de nome</h3>
+        <label>Nome antigo:</label>
+        <input id="nomeAntigo" type="text" disabled>
+        <label>Novo nome:</label>
+        <input id="novoNome" type="text">
+      </div>
+
+      <div class="campo">
+        <h3>Trocar email</h3>
+        <label>Email antigo:</label>
+        <input id="emailAntigo" type="text" disabled>
+        <label>Novo email:</label>
+        <input id="novoEmail" type="email">
+      </div>
+      <button id="salvarDados" class="salvar-btn">Salvar alterações</button>
+    </section>
+
+    <!-- Seção: Redefinir senha -->
+    <section id="senha" class="conteudo-section">
+      <h2>Redefinir senha</h2>
+      <div class="campo">
+        <label>Senha atual:</label>
+        <input id="senhaAtual" type="password">
+        <label>Nova senha:</label>
+        <input id="novaSenha" type="password">
+      </div>
+      <button id="salvarSenha" class="salvar-btn">Salvar nova senha</button>
+    </section>
+
+    <!-- Seção: Evolução -->
+    <section id="evolucao" class="conteudo-section">
+  <h2>Evolução no jogo</h2>
+
+  <div class="evolucao-container">
+    <h3>• Níveis</h3>
+    <div class="nivel-barra" id="nivelBarra"></div>
+
+    <h3>• Descrição dos níveis</h3>
+    <div class="descricao-niveis" id="descricaoNiveis"></div>
+
+    <a href="./jogos/mapa.html"><button id="voltarMapa" class="btn-voltar">Voltar ao mapa</button></a>
+  </div>
+</section>
+
+  </main>
+</div>
+
+<script src="../assets/js/perfil.js"></script>
+</body>
+</html>

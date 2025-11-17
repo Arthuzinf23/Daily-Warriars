@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Scrum</title>
+  <link rel="stylesheet" href="../scrum-quiz/quiz.css">
+</head>
+<body>
+  <div class="quiz-page">
+  <div class="quiz-container">
+    <h1>📋 Quiz Scrum</h1>
+
+    <div id="start-screen">
+      <button id="start-btn">Iniciar jogo</button>
+    </div>
+
+    <div id="game-screen" class="hidden">
+      <div class="status-bar">
+        <p>Pontuação: <span id="score">0</span></p>
+        <p id="timer">⏱ 00:00</p>
+      </div>
+      <div id="question-box">
+        <h2 id="question"></h2>
+        <div id="options"></div>
+      </div>
+      <div id="feedback"></div>
+    </div>
+
+    <div id="end-screen" class="hidden">
+      <h2>Fim de jogo!</h2>
+      <p id="summary"></p>
+      <button id="restart-btn">Reiniciar</button>
+    </div>
+
+    <!-- 🔙 Botão para voltar -->
+    <a href="../jogos.html"><button class="back-btn">⬅ Voltar para Jogos</button></a>
+  </div>
+  </div>
+
+  <script src="../scrum-quiz/quiz.js"></script>
+</body>
+</html>

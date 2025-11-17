@@ -1,0 +1,247 @@
+body {
+  background: url("../assets/img/backgrounds/florest.png") center/cover no-repeat;
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.perfil-container {
+  display: flex;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  overflow: hidden;
+  width: 900px;
+}
+
+/* Painel esquerdo */
+.perfil-menu {
+  width: 300px;
+  background: #f7f7f7;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perfil-foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  object-fit: cover;
+}
+
+.trocar-foto {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 0.9em;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 15px 0;
+}
+
+.menu-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  background: #e0e0e0;
+  font-weight: 600;
+}
+
+.menu-btn:hover, .menu-btn.ativo {
+  background: #333;
+  color: white;
+}
+
+.logout-btn {
+  margin-top: auto;
+  background: #eee;
+  border: none;
+  padding: 10px;
+  color: #900;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #ccc;
+}
+
+/* Painel direito */
+.perfil-conteudo {
+  flex: 1;
+  padding: 30px;
+}
+
+.conteudo-section {
+  display: none;
+}
+
+.conteudo-section.ativo {
+  display: block;
+}
+
+.campo {
+  margin-bottom: 25px;
+}
+
+.campo h3 {
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.campo label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.campo input {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  border-bottom: 1px solid #666;
+  background: transparent;
+}
+
+.salvar-btn {
+  background: #333;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.salvar-btn:hover {
+  background: #555;
+}
+/* ==== EVOLUÇÃO NO JOGO ==== */
+.evolucao-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.evolucao-container h3 {
+  background: #e5e5e5;
+  padding: 6px 12px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+/* Barra de níveis */
+.nivel-barra {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.nivel {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.nivel.bloqueado {
+  background: #777;
+  opacity: 0.5;
+}
+
+.nivel.bloqueado::after {
+  content: "🔒";
+  position: absolute;
+  font-size: 16px;
+}
+
+/* Paleta de cores dos níveis */
+.nivel[data-nivel="1"] { background: #00b300; }
+.nivel[data-nivel="2"] { background: #00cc33; }
+.nivel[data-nivel="3"] { background: #33cc33; }
+.nivel[data-nivel="4"] { background: #80ff00; }
+.nivel[data-nivel="5"] { background: #cccc00; }
+.nivel[data-nivel="6"] { background: #ffcc00; }
+.nivel[data-nivel="7"] { background: #ff9933; }
+.nivel[data-nivel="8"] { background: #ff6600; }
+.nivel[data-nivel="9"] { background: #ff3333; }
+.nivel[data-nivel="10"] { background: #cc0000; }
+.nivel[data-nivel="11"] { background: #990000; }
+.nivel[data-nivel="12"] { background: #660000; }
+
+/* Descrição dos níveis */
+.descricao-niveis {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.nivel-card {
+  width: 150px;
+  height: 150px;
+  background: #f0f0f0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 0.85rem;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nivel-card img {
+  width: 60px;
+  margin-bottom: 8px;
+}
+
+.nivel-card.bloqueado {
+  background: #ddd;
+  color: #555;
+}
+
+/* Botão voltar */
+.btn-voltar {
+  margin-top: 25px;
+  padding: 8px 20px;
+  border: none;
+  background: #333;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-voltar:hover {
+  background: #555;
+}

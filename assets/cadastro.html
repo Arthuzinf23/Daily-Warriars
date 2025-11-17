@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro | Daily Warriors</title>
+  <link rel="stylesheet" href="../assets/css/cadastro.css">
+</head>
+<body>
+  <div class="cadastro-container">
+    <form id="formCadastro" class="cadastro-box">
+      <div class="foto-container">
+        <img id="fotoPreview" src="img/default-user.png" alt="Foto do usuário">
+        <label for="fotoInput">Escolher Foto</label>
+        <input type="file" id="fotoInput" accept="image/png, image/jpeg" hidden>
+      </div>
+
+      <label>Nome: <span class="req">*</span></label>
+      <input type="text" id="nome" required>
+
+      <label>E-mail: <span class="req">*</span></label>
+      <input type="email" id="email" required>
+
+      <label>Nível de Classe: <span class="req">*</span></label>
+      <div class="nivel-container">
+        <div class="nivel" data-nivel="Básico">Básico</div>
+        <div class="nivel" data-nivel="Intermediário">Intermediário</div>
+        <div class="nivel" data-nivel="Avançado">Avançado</div>
+      </div>
+
+      <label>Senha: <span class="req">*</span></label>
+      <input type="password" id="senha" required placeholder="Mínimo 8 caracteres, 1 número e 1 maiúsculo">
+      
+      <label>Confirme sua Senha: <span class="req">*</span></label>
+      <input type="password" id="confirmarSenha" required>
+
+      <div class="check-container">
+        <input type="checkbox" id="confirmacaoEmail">
+        <label for="confirmacaoEmail">Confirmação por e-mail de “Cadastro Bem Sucedido!”</label>
+      </div>
+
+      <div class="social-buttons">
+        
+        <button type="button" class="google">Entrar com Google</button>
+      </div>
+
+      <button type="submit" class="btn-cadastrar">CADASTRAR</button>
+    </form>
+
+    <div id="msgSucesso" class="mensagem hidden">✅ Cadastro feito com sucesso!</div>
+  </div>
+
+  <script src="../assets/js/cadastro.js"></script>
+</body>
+</html>
