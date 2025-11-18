@@ -577,7 +577,7 @@ body {
 .btn-quote {
   margin-top: 20px;
   padding: 12px 25px;
-  background: white;
+  background: #182B3B;
   border: none;
   border-radius: 8px;
   color: #B4161B;
@@ -598,7 +598,7 @@ body {
 
 .hero-image img {
   width: 85%;
-  border: 8px solid black;
+  
 }
 
 /* ================================ */
